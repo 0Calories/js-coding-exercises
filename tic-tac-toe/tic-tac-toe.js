@@ -66,5 +66,6 @@ function handleClickCell(e) {
 
   document.getElementById(`${row}-${col}`).removeEventListener('click', handleClickCell);
   currentPlayerSign = currentPlayerSign * -1;
+  currentPlayerText.textContent = `It is Player ${currentPlayerSign == 1 ? '1' : '2'}'s turn`;
 }
 
