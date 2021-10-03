@@ -7,8 +7,8 @@
 document.getElementById('table-form').addEventListener('submit', (e) => {
   e.preventDefault();
 
-  const rows = e.target.elements.rows.value;
-  const cols = e.target.elements.cols.value;
+  const rows = parseInt(e.target.elements.rows.value);
+  const cols = parseInt(e.target.elements.cols.value);
 
   for (let i = 0; i < rows; i++) {
     const row = document.createElement('tr');
@@ -18,7 +18,6 @@ document.getElementById('table-form').addEventListener('submit', (e) => {
       col.setAttribute('id', `${i}-${j}`);
       row.appendChild(col);
     }
-    console.log(row)
     document.querySelector('#table').appendChild(row);
   }
 
